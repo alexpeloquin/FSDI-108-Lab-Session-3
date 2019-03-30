@@ -1,0 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
+/* sqiggly line tells to look in the mode_modules folder then follow path to bootstrap file*/
+
+@import"~bootstrap/dist/css/bootstrap.min.css";

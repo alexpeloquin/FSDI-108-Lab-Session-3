@@ -1,0 +1,45 @@
+
+
+<div>
+    <form>
+
+        values: {{userModel.userName}} - {{userModel.password}}
+
+        <br>
+        <label>User Name:</label>
+        <input type="text" [(ngModel)]="userModel.userName" name="userName" placeholder="User Name">
+        <br>
+        <label>Password:</label>
+        <input type="text" [(ngModel)]="userModel.password"
+        name="password" placeholder="Password">
+        <br>
+        <label>Re-type Password:</label>
+        <input type="text" [(ngModel)]="pass2"
+        name="pass2" placeholder="Password">
+        <br>
+
+        <div class="alert alert-danger" role="alert" *ngIf="userModel.password && pass2 && userModel.password !=pass2">
+                Passwords do not match please verify
+              </div>
+    </form>
+    
+    <hr>
+
+    <form>
+        <br>
+        <label>Email:</label>
+        <input type="text" [(ngModel)]="userModel.email" name="email" placeholder="Email">
+        <br>
+        <label>First Name:</label>
+        <input type="text" [(ngModel)]="userModel.firstName" name="firstName" placeholder="Mookie">
+        <br>
+        <label>Last Name:</label>
+        <input type="text" [(ngModel)]="userModel.lastName" name="lastName" placeholder="Betts">
+        <br>    
+    <button (click)="save();" type="button" id="btnSave" class="btn btn-md btn-success">Register</button>
+
+    </form>  
+  </div>
+
+
+
